@@ -1,0 +1,23 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: zull
+#  cloud:
+#    config:
+#      label: master
+#      profile: dev
+#      uri: http://localhost:8089/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka
+zuul:
+  routes:
+    api-a:
+      path: /apia/**
+      serviceId: ribbon
+    api-b:
+      path: /apib/**
+      serviceId: feign
+

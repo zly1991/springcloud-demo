@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zly1991/springcloudconfigs-zhou
+          username: zly1991
+          password: 19911211aili
+          search-paths: /**
+      label: master
+
+server:
+  port: 8089
+#http://localhost:8089/dev/test/
