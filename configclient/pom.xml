@@ -9,10 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dzhou</groupId>
-    <artifactId>config</artifactId>
+    <artifactId>configclient</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>config</name>
+    <name>configclient</name>
     <description>Demo project for Spring Boot</description>
+
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,10 +21,9 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -46,6 +46,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -59,7 +65,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>

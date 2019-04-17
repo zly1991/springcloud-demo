@@ -1,3 +1,9 @@
+server:
+  port: 8089
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka
 spring:
   application:
     name: config-server
@@ -11,6 +17,4 @@ spring:
           search-paths: /**
       label: master
 
-server:
-  port: 8089
 #http://localhost:8089/dev/test/
